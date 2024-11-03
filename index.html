@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear Shop - Your One-Stop Tech Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+
+    <style>
+        /* Styling for the container holding the buttons */
+        div {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* General button styling */
+        button {
+            background-color: #4CAF50;
+            /* Green background */
+            color: white;
+            /* White text */
+            padding: 10px 20px;
+            /* Padding for buttons */
+            border: none;
+            /* Remove border */
+            border-radius: 5px;
+            /* Rounded corners */
+            cursor: pointer;
+            /* Pointer on hover */
+            font-size: 16px;
+            margin: 10px;
+            /* Add some space between buttons */
+            transition: background-color 0.3s ease;
+            /* Smooth hover transition */
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #45a049;
+            /* Darker green on hover */
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white shadow-lg fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">TechGear Shop</div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="hover:text-blue-200">Home</a>
+                    <a href="products.html" class="hover:text-blue-200">Products</a>
+                    <a href="video.html" class="hover:text-blue-200">Video</a>
+                    <a href="add_to_cart.html" class="hover:text-blue-200">Cart<span id="cart-count">(0)</span></a>
+                    <a href="login.html" class="hover:text-blue-200">Login</a>
+                    <a href="signup.html" class="hover:text-blue-200">Sign Up</a>
+                    <a href="Privacy Policy.pdf" class="hover:text-blue-200" download>Download PDF</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 pt-24">
+        <section class="mb-12">
+            <div class="bg-blue-500 text-white rounded-lg shadow-md p-8 text-center">
+                <h1 class="text-4xl font-bold mb-4">Welcome to TechGear Shop</h1>
+                <p class="text-xl mb-6">Discover the latest in tech innovation and gear up for the future!</p>
+                <a href="products.html"
+                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300">Shop
+                    Now</a>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Featured Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://m.media-amazon.com/images/I/61VVeNXaw4L.jpg" alt="Smart Watch Pro"
+                        class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-semibold mb-2">Smart Watch Pro</h3>
+                    <p class="text-gray-600 mb-4">Stay connected with our latest smartwatch. Features include heart rate
+                        monitoring, GPS, and more.</p>
+                    <p class="text-blue-600 font-bold mb-2">$199.99</p>
+                    <a href="products.html"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">View Items</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://m.media-amazon.com/images/I/51B9yEx2g+L._AC_UF1000,1000_QL80_.jpg"
+                        alt="Wireless Earbuds" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-semibold mb-2">Wireless Earbuds</h3>
+                    <p class="text-gray-600 mb-4">Experience crystal-clear sound with our noise-cancelling wireless
+                        earbuds.</p>
+                    <p class="text-blue-600 font-bold mb-2">$129.99</p>
+                    <a href="products.html"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">View Items</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://m.media-amazon.com/images/I/61ZQmvzVJuL._AC_UF1000,1000_QL80_.jpg"
+                        alt="4K Action Camera" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-semibold mb-2">4K Action Camera</h3>
+                    <p class="text-gray-600 mb-4">Capture your adventures in stunning 4K resolution with our waterproof
+                        action camera.</p>
+                    <p class="text-blue-600 font-bold mb-2">$249.99</p>
+                    <a href="products.html"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">View Items</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkwlOJBRXTwcLk1efIFaDk71le5uz06jcg&s"
+                        alt="Smart Home Hub" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-semibold mb-2">Smart Home Hub</h3>
+                    <p class="text-gray-600 mb-4">Control your entire home with our easy-to-use smart home hub.
+                        Compatible with various IoT devices.</p>
+                    <p class="text-blue-600 font-bold mb-2">$179.99</p>
+                    <a href="products.html"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">View Items</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Why Choose TechGear?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Quality Products</h3>
+                    <p class="text-gray-600">We source only the best tech gear from trusted manufacturers, ensuring you
+                        get top-notch quality with every purchase.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Fast Shipping</h3>
+                    <p class="text-gray-600">Get your orders delivered quickly with our expedited shipping options. Most
+                        orders arrive within 2-3 business days.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Our customer support team is always ready to assist you with any questions
+                        or concerns, any time of day or night.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Latest Tech News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">The Future of Wearable Tech</h3>
+                    <p class="text-gray-600 mb-4">Explore the latest trends in wearable technology and how it's shaping
+                        our future. From health monitoring to augmented reality, the possibilities are endless.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">5G Revolution: What You Need to Know</h3>
+                    <p class="text-gray-600 mb-4">5G is set to transform how we connect and communicate. Learn about the
+                        benefits, challenges, and what it means for consumers and businesses alike.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-6">Customer Reviews</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/I/41LJV5P-UXL.jpg" alt="Customer"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">John D.</h4>
+                            <div class="flex text-yellow-400">
+                                <!-- Add star icons as needed -->
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Amazing selection of tech gadgets! The smart watch I bought exceeds my
+                        expectations. Great customer service too!"</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg"
+                            alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah M.</h4>
+                            <div class="flex text-yellow-400">
+                                <!-- Add star icons as needed -->
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Fast shipping and the product quality is outstanding. I'll definitely be a
+                        returning customer!"</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h3 class="text-xl font-semibold mb-2">TechGear Shop</h3>
+                        <p class="text-gray-400">Your one-stop shop for all things tech.</p>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+                        <ul class="text-gray-400">
+                            <li><a href="#" class="hover:text-white">Home</a></li>
+                            <li><a href="#" class="hover:text-white">Products</a></li>
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h3 class="text-xl font-semibold mb-2">Contact Us</h3>
+                        <p class="text-gray-400">123 Tech Street, Digital City, 12345</p>
+                        <p class="text-gray-400">Email: info@techgearshop.com</p>
+                        <p class="text-gray-400">Phone: (123) 456-7890</p>
+                    </div>
+                    <div class="w-full md:w-1/4">
+                        <h3 class="text-xl font-semibold mb-2">Newsletter</h3>
+                        <p class="text-gray-400 mb-2">Subscribe to our newsletter for the latest updates and offers.
+                        </p>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email"
+                                class="px-4 py-2 w-full rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <button type="submit"
+                                class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400 text-center">
+                    <p>&copy; 2024 TechGear Shop. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
