@@ -17,6 +17,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+
+    <style>
+
+/* Specific button colors (you can modify as needed) */
+#select-item {
+    background-color: #007BFF; /* Blue */
+}
+
+#add-to-cart {
+    background-color: #28A745; /* Green */
+}
+
+#view-item-list {
+    background-color: #17A2B8; /* Cyan */
+}
+
+#begin-checkout {
+    background-color: #FFC107; /* Yellow */
+}
+
+#remove-from-cart {
+    background-color: #DC3545; /* Red */
+}
+
+/* Hover effects for each button */
+#select-item:hover {
+    background-color: #0069d9;
+}
+
+#add-to-cart:hover {
+    background-color: #218838;
+}
+
+#view-item-list:hover {
+    background-color: #138496;
+}
+
+#begin-checkout:hover {
+    background-color: #e0a800;
+}
+
+#remove-from-cart:hover {
+    background-color: #c82333;
+}
+
+
+    </style>
+
 </head>
 
 <body class="bg-gray-100">
@@ -77,6 +125,24 @@
                 </div>
             </div>
         </div>
+
+        <div>Click the buttons for custom events</div>
+
+            <!-- Select Item button -->
+            <button id="select-item">Select Item</button>
+
+            <!-- Add to Cart button -->
+            <button id="add-to-cart">Add to Cart</button>
+
+            <!-- View Item List button -->
+            <button id="view-item-list">View Item List</button>
+
+            <!-- Begin Checkout button -->
+            <button id="begin-checkout">Begin Checkout</button>
+
+            <!-- Remove from Cart button -->
+            <button id="remove-from-cart">Remove from Cart</button>
+
     </main>
 
     <!-- Footer -->
@@ -114,6 +180,67 @@
             }
         });
     </script>
+
+    <script>
+        function selectItem(item) {
+            gtag('event', 'select_item', {
+                'item_name': item.name,
+                'item_category': item.category,
+                'item_id': item.id
+            });
+            console.log('Item selected:', item.name);
+        }
+    </script>
+    <script>
+        function viewItemDetails(item) {
+            gtag('event', 'view_item', {
+                'item_name': item.name,
+                'item_category': item.category,
+                'item_id': item.id,
+                'price': item.price
+            });
+            console.log('Viewing item details:', item.name);
+        }
+    </script>
+    <script>
+        function addToCart(item) {
+            gtag('event', 'add_to_cart', {
+                'item_name': item.name,
+                'item_category': item.category,
+                'item_id': item.id,
+                'price': item.price,
+                'quantity': 1
+            });
+            console.log('Added to cart:', item.name);
+        }
+    </script>
+    <script>
+        function removeFromCart(item) {
+            gtag('event', 'remove_from_cart', {
+                'item_name': item.name,
+                'item_category': item.category,
+                'item_id': item.id,
+                'price': item.price,
+                'quantity': 1
+            });
+            console.log('Removed from cart:', item.name);
+        }
+    </script>
+    <script>
+        function initiateCheckout(items) {
+            gtag('event', 'begin_checkout', {
+                'items': items.map(item => ({
+                    'item_name': item.name,
+                    'item_category': item.category,
+                    'item_id': item.id,
+                    'price': item.price,
+                    'quantity': 1
+                }))
+            });
+            console.log('Initiated checkout');
+        }
+    </script>
+
 </body>
 
 </html>
