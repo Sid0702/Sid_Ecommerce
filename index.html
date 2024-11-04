@@ -268,5 +268,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </footer>
     </main>
+    <script>
+    function selectItem(item) {
+        gtag('event', 'select_item', {
+            'item_name': item.name,
+            'item_category': item.category,
+            'item_id': item.id
+        });
+        console.log('Item selected:', item.name);
+    }
+</script>
+<script>
+    function viewItemDetails(item) {
+        gtag('event', 'view_item', {
+            'item_name': item.name,
+            'item_category': item.category,
+            'item_id': item.id,
+            'price': item.price
+        });
+        console.log('Viewing item details:', item.name);
+    }
+</script>
+<script>
+    function addToCart(item) {
+        gtag('event', 'add_to_cart', {
+            'item_name': item.name,
+            'item_category': item.category,
+            'item_id': item.id,
+            'price': item.price,
+            'quantity': 1
+        });
+        console.log('Added to cart:', item.name);
+    }
+</script>
+<script>
+    function removeFromCart(item) {
+        gtag('event', 'remove_from_cart', {
+            'item_name': item.name,
+            'item_category': item.category,
+            'item_id': item.id,
+            'price': item.price,
+            'quantity': 1
+        });
+        console.log('Removed from cart:', item.name);
+    }
+</script>
+<script>
+    function initiateCheckout(items) {
+        gtag('event', 'begin_checkout', {
+            'items': items.map(item => ({
+                'item_name': item.name,
+                'item_category': item.category,
+                'item_id': item.id,
+                'price': item.price,
+                'quantity': 1
+            }))
+        });
+        console.log('Initiated checkout');
+    }
+</script>
 </body>
 </html>
